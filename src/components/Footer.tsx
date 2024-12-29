@@ -12,10 +12,26 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="#" className="text-gray-400 hover:text-white">Home</Link></li>
-              <li><Link href="#features" className="text-gray-400 hover:text-white">Features</Link></li>
-              <li><Link href="#how-it-works" className="text-gray-400 hover:text-white">How It Works</Link></li>
-              <li><Link href="#testimonials" className="text-gray-400 hover:text-white">Testimonials</Link></li>
+              <li>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="#features" className="text-gray-400 hover:text-white">
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link href="#how-it-works" className="text-gray-400 hover:text-white">
+                  How It Works
+                </Link>
+              </li>
+              <li>
+                <Link href="#testimonials" className="text-gray-400 hover:text-white">
+                  Testimonials
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -29,16 +45,19 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-white">Facebook</Link>
-              <Link href="#" className="text-gray-400 hover:text-white">Twitter</Link>
-              <Link 
-  href="https://www.instagram.com/routecraft24/" 
-  target="_blank" 
-  className="text-gray-400 hover:text-white"
->
-  Instagram
-</Link>
-
+              <Link href="#" className="text-gray-400 hover:text-white">
+                Facebook
+              </Link>
+              <Link href="#" className="text-gray-400 hover:text-white">
+                Twitter
+              </Link>
+              <Link
+                href="https://www.instagram.com/routecraft24/"
+                target="_blank"
+                className="text-gray-400 hover:text-white"
+              >
+                Instagram
+              </Link>
             </div>
           </div>
         </div>

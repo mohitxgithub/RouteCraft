@@ -3,9 +3,31 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import TripPlannerForm from './TripPlannerForm'
+import ItineraryDisplay from './ItineraryDisplay'
 
 export default function Hero() {
   const [showModal, setShowModal] = useState(false)
+  const [itinerary, setItinerary] = useState(null)
+
+  const handleFormSubmit = async (formData: any) => {
+    try {
+      const response = await fetch('/api/generate-itinerary', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      if (!response.ok) {
+        throw new Error('Failed to generate itinerary')
+      }
+      const data = await response.json()
+      setItinerary(data)
+    } catch (error) {
+      console.error('Error generating itinerary:', error)
+      alert('Failed to generate itinerary. Please try again.')
+    }
+  }
 
   return (
     <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
@@ -33,15 +55,25 @@ export default function Hero() {
 
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-4">
               <button
-                onClick={() => setShowModal(false)}
+                onClick={() => {
+                  setShowModal(false)
+                  setItinerary(null)
+                }}
                 className="float-right text-gray-500 hover:text-gray-700"
               >
                 &times;
               </button>
-              <TripPlannerForm />
+              {itinerary ? (
+                <ItineraryDisplay itinerary={itinerary} onClose={() => {
+                  setShowModal(false)
+                  setItinerary(null)
+                }} />
+              ) : (
+                <TripPlannerForm onSubmit={handleFormSubmit} />
+              )}
             </div>
           </div>
         </div>

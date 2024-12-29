@@ -9,32 +9,32 @@ const testimonials = [
     name: 'Shubham Lande',
     role: 'Adventure Enthusiast',
     image: '/image/image-400x400 (1).jpg',
-    quote: "RouteCraft made planning my backpacking trip across Europe a breeze. The customized itinerary was perfect!"
+    quote: "RouteCraft made planning my backpacking trip across Europe a breeze. The customized itinerary was perfect!",
   },
   {
     name: 'Mohit Kattungal',
     role: 'Business Traveler',
     image: '/image/image-400x400.jpg',
-    quote: 'As a frequent business traveler, RouteCraft has saved me countless hours of planning. Highly recommended!'
+    quote: 'As a frequent business traveler, RouteCraft has saved me countless hours of planning. Highly recommended!',
   },
   {
     name: 'Swara Patil',
     role: 'Family Vacationer',
     image: '/placeholder.svg?height=100&width=100',
-    quote: 'Our family vacation was stress-free thanks to RouteCraft. The hotel recommendations were spot-on!'
+    quote: 'Our family vacation was stress-free thanks to RouteCraft. The hotel recommendations were spot-on!',
   },
   {
     name: 'Adarsh Singh',
     role: 'Irritating Traveler from Palghar',
     image: '/image/image-400x400 (2).jpg',
-    quote: "RouteCraft helped me discover hidden places in Palghar I never would have found on my own. I enjoyed my holiday with my friend Prem only because of RouteCraft '"
+    quote: "RouteCraft helped me discover hidden places in Palghar I never would have found on my own. I enjoyed my holiday with my friend Prem only because of RouteCraft.",
   },
   {
     name: 'Amaan Shaikh',
     role: 'Luxury Traveler',
     image: '/image/images (01).jpeg',
-    quote: "The attention to detail in RouteCraft's luxury itineraries is unparalleled. Every trip feels tailor-made and exclusive."
-  }
+    quote: "The attention to detail in RouteCraft's luxury itineraries is unparalleled. Every trip feels tailor-made and exclusive.",
+  },
 ]
 
 export default function Testimonials() {
@@ -68,14 +68,14 @@ export default function Testimonials() {
         <h2 className="text-3xl font-bold text-center text-black mb-12">What Our Users Say</h2>
         <div className="relative max-w-4xl mx-auto">
           <div className="overflow-hidden">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out" 
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div 
-                    className={`bg-white p-6 rounded-lg shadow-lg transition-all duration-500 ${
+                  <div
+                    className={`bg-white p-6 rounded-lg shadow-lg transition-transform duration-500 ${
                       index === currentIndex ? 'scale-105 shadow-xl' : 'scale-100'
                     }`}
                   >
@@ -98,15 +98,15 @@ export default function Testimonials() {
               ))}
             </div>
           </div>
-          <button 
-            onClick={prevTestimonial} 
+          <button
+            onClick={prevTestimonial}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6 text-gray-600" />
           </button>
-          <button 
-            onClick={nextTestimonial} 
+          <button
+            onClick={nextTestimonial}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors"
             aria-label="Next testimonial"
           >
@@ -117,4 +117,3 @@ export default function Testimonials() {
     </section>
   )
 }
-

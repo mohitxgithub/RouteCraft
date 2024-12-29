@@ -12,13 +12,12 @@ export default function EditableLogo({ color, setColor }: EditableLogoProps) {
 
   return (
     <div className="relative">
-      {/* Replace SVG with an image */}
+      {/* Use your custom image */}
       <img
-        src="/image/routecraftlogo.png" // Update this to the correct path of your PNG
+        src="/image/routecraftlogo.png" // Ensure the correct path to your PNG
         alt="Custom Logo"
         onClick={() => setIsEditing(true)}
         className="cursor-pointer w-10 h-10" // Adjust size as needed
-        
       />
       {isEditing && (
         <div className="absolute top-full left-0 mt-2 bg-white shadow-md rounded-md p-2">
