@@ -9,24 +9,8 @@ export default function Hero() {
   const [showModal, setShowModal] = useState(false)
   const [itinerary, setItinerary] = useState(null)
 
-  const handleFormSubmit = async (formData: any) => {
-    try {
-      const response = await fetch('/api/generate-itinerary', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-      if (!response.ok) {
-        throw new Error('Failed to generate itinerary')
-      }
-      const data = await response.json()
-      setItinerary(data)
-    } catch (error) {
-      console.error('Error generating itinerary:', error)
-      alert('Failed to generate itinerary. Please try again.')
-    }
+  const handleFormSubmit = (generatedItinerary: any) => {
+    setItinerary(generatedItinerary)
   }
 
   return (
