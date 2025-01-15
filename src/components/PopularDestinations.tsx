@@ -4,12 +4,12 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 const destinations = [
-  { name: 'Paris', image: '/paris.jpg', description: 'The City of Light' },
-  { name: 'Tokyo', image: '/tokyo.jpg', description: 'Where tradition meets future' },
-  { name: 'New York', image: '/new-york.jpg', description: 'The Big Apple' },
-  { name: 'Bali', image: '/bali.jpg', description: 'Island of the Gods' },
-  { name: 'Rome', image: '/rome.jpg', description: 'The Eternal City' },
-  { name: 'Santorini', image: '/santorini.jpg', description: 'Greek island paradise' },
+  { name: 'Paris', image: '/image/paris.jpg', description: 'The City of Light' },
+  { name: 'Tokyo', image: '/image/tokyo.jpg', description: 'Where tradition meets future' },
+  { name: 'New York', image: '/image/newyork.jpg', description: 'The Big Apple' },
+  { name: 'Bali', image: '/image/bali.webp', description: 'Island of the Gods' },
+  { name: 'Rome', image: '/image/rome.jpg', description: 'The Eternal City' },
+  { name: 'Santorini', image: '/image/santorini.jpg', description: 'Greek island paradise' },
 ]
 
 export default function PopularDestinations() {

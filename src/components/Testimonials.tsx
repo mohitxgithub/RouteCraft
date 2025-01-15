@@ -6,22 +6,22 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
+    name: 'Swara Patil',
     role: 'Adventure Enthusiast',
     image: '/testimonial-1.jpg',
     quote: 'RouteCraft made planning my backpacking trip across Europe a breeze. The customized itinerary was perfect!'
   },
   {
-    name: 'Michael Chen',
+    name: 'Mohit Kattungal',
     role: 'Business Traveler',
-    image: '/testimonial-2.jpg',
+    image: '/image/image-400x400.jpg',
     quote: 'As a frequent business traveler, RouteCraft has saved me countless hours of planning. Highly recommended!'
   },
   {
-    name: 'Emily Rodriguez',
-    role: 'Family Vacationer',
-    image: '/testimonial-3.jpg',
-    quote: 'Our family vacation was stress-free thanks to RouteCraft. The hotel recommendations were spot-on!'
+    name: 'Adarsh Singh',
+    role: 'Couple Traveler',
+    image: '/image/image-400x400 (2).jpg',
+    quote: 'Routecraft made my itinerary in best way , because of routecraft I was able to spend my Honeymoon with my only friend Prem Kakade in best way ,Thanks Routecraft!!!'
   },
   {
     name: 'Alex Patel',
